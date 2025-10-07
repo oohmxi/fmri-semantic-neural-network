@@ -7,10 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
 [![AFNI](https://img.shields.io/badge/AFNI-Neuroimaging-green.svg)](https://afni.nimh.nih.gov)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![DOI](https://img.shields.io/badge/DOI-10.1186%2Fs12984--024--01345--2-blue.svg)](https://doi.org/10.1186/s12984-024-01345-2)
 [![Citation](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
-[![Tests](https://img.shields.io/badge/Tests-Passing-green.svg)](https://github.com/ohernandez/fmri-tool-representation/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-80%25-green.svg)](https://github.com/ohernandez/fmri-tool-representation/actions)
 
 ## Project Motivation
 
