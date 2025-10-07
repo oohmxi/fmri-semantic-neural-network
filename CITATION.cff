@@ -3,7 +3,7 @@ message: If you use this software, please cite it as below.
 authors:
   - family-names: Hernandez
     given-names: Omar
-    orcid: https://orcid.org/0000-0000-0000-0000
+    orcid: https://orcid.org/0000-0002-8666-2210
     affiliation: Emory University
     email: ohfreelancing@gmail.com
 title: 'fMRI Tool Representation Study: Neural Representations of Graspable Objects'
@@ -41,7 +41,7 @@ preferred-citation:
     - family-names: Hernandez
       given-names: Omar
       affiliation: Emory University
-      orcid: https://orcid.org/0000-0000-0000-0000
+      orcid: https://orcid.org/0000-0002-8666-2210
   version: 1.0.0
   date-released: 2024-10-06
   url: https://github.com/ohernandez/fmri-tool-representation
