@@ -93,9 +93,11 @@
             <h2>Instructions</h2>
             <div class="instructions">
                 <p>Welcome to the Neural Representation of Tools Study!</p>
-                <p>You will see images of tools and shapes.</p>
+                <p>You will see images of tools and shapes in blocks.</p>
+                <p>Each image will be shown for 2 seconds, followed by a 10-second break.</p>
                 <p>Simply look at each image as it appears.</p>
-                <p>The experiment will run automatically.</p>
+                <p>The experiment will run automatically and take about 10 minutes.</p>
+                <p><strong>Demo Mode:</strong> Press SPACEBAR during the experiment to toggle demo mode for faster demonstrations.</p>
                 <br>
                 <button class="button" onclick="beginExperiment()">Begin Experiment</button>
             </div>
@@ -126,22 +128,23 @@
             trials: [],
             currentTrial: 0,
             currentCondition: 0,
+            demoMode: false,
             conditions: [
                 {
-                    name: 'Tools',
-                    images: ['flashlight.jpg', 'frypan.jpg', 'hairbrush.jpg', 'hairdryer.png', 'kinfe.jpg', 'nailclipper.png', 'pliers.jpg', 'razor.jpg', 'scissors.jpg', 'screwdriver.jpg']
-                },
-                {
-                    name: 'Shapes', 
-                    images: ['cone.png', 'cube.png', 'cylinder.png', 'dodecahedron.jpg', 'icosahedron.png', 'pent.png', 'pyramid.png', 'sphere.jpg', 'star.jpg', 'torus.png']
-                },
-                {
                     name: 'Scrambled Tools',
-                    images: ['SCRbrush.jpg', 'SCRclipper.png', 'SCRdryer.png', 'SCRflash.jpg', 'SCRknife.jpg', 'SCRpan.jpg', 'SCRpliers.jpg', 'SCRrazor.jpg', 'SCRscissors.jpg', 'SCRscrewdriver.jpg']
+                    images: ['SCRbrush.jpg', 'SCRclipper.png', 'SCRdryer.png', 'SCRflash.jpg', 'SCRknife.jpg', 'SCRpan.jpg', 'SCRpliers.jpg', 'SCRrazor.jpg']
+                },
+                {
+                    name: 'Tools',
+                    images: ['flashlight.jpg', 'frypan.jpg', 'hairbrush.jpg', 'hairdryer.png', 'kinfe.jpg', 'nailclipper.png', 'pliers.jpg', 'razor.jpg']
                 },
                 {
                     name: 'Scrambled Shapes',
-                    images: ['SCRcone.png', 'SCRcube.png', 'SCRcylinder.png', 'SCRdodeca.jpg', 'SCRicosa.png', 'SCRpent.png', 'SCRpyramid.png', 'SCRsphere.jpg', 'SCRstar.jpg', 'SCRtorus.png']
+                    images: ['SCRcone.png', 'SCRcube.png', 'SCRcylinder.png', 'SCRdodeca.jpg', 'SCRicosa.png', 'SCRpent.png', 'SCRpyramid.png', 'SCRsphere.jpg']
+                },
+                {
+                    name: 'Shapes', 
+                    images: ['cone.png', 'cube.png', 'cylinder.png', 'dodecahedron.jpg', 'icosahedron.png', 'pent.png', 'pyramid.png', 'sphere.jpg']
                 }
             ]
         };
@@ -171,6 +174,8 @@
             runNextTrial();
         }
 
+        let currentTimeout = null;
+
         function runNextTrial() {
             if (experimentData.currentCondition >= experimentData.conditions.length) {
                 endExperiment();
@@ -197,7 +202,8 @@
             document.getElementById('fixation').classList.remove('hidden');
             document.getElementById('stimulus').classList.add('hidden');
 
-            setTimeout(() => {
+            const fixationTime = experimentData.demoMode ? 200 : 1000; // Faster in demo mode
+            currentTimeout = setTimeout(() => {
                 // Hide fixation, show stimulus
                 document.getElementById('fixation').classList.add('hidden');
                 const stimulusImg = document.getElementById('stimulus');
@@ -212,16 +218,18 @@
                     timestamp: new Date()
                 });
 
-                setTimeout(() => {
+                const stimulusTime = experimentData.demoMode ? 1000 : 2000; // Faster in demo mode
+                currentTimeout = setTimeout(() => {
                     // Hide stimulus and move to next trial
                     stimulusImg.classList.add('hidden');
                     experimentData.currentTrial++;
                     
-                    setTimeout(() => {
+                    const interstimulusTime = experimentData.demoMode ? 500 : 10000; // Much faster in demo mode
+                    currentTimeout = setTimeout(() => {
                         runNextTrial();
-                    }, 500); // Brief pause between trials
-                }, 2000); // Show stimulus for 2 seconds
-            }, 500); // Show fixation for 0.5 seconds
+                    }, interstimulusTime);
+                }, stimulusTime);
+            }, fixationTime);
         }
 
         function endExperiment() {
@@ -245,13 +253,45 @@
             return shuffled;
         }
 
-        // Allow spacebar to start experiment from instructions
+        // Handle spacebar for starting experiment and demo mode
         document.addEventListener('keydown', function(event) {
-            if (event.code === 'Space' && !document.getElementById('instructions').classList.contains('hidden')) {
+            if (event.code === 'Space') {
                 event.preventDefault();
+                
+                // Start experiment from instructions
+                if (!document.getElementById('instructions').classList.contains('hidden')) {
                 beginExperiment();
+                }
+                // Toggle demo mode during experiment
+                else if (!document.getElementById('experiment').classList.contains('hidden')) {
+                    toggleDemoMode();
+                }
             }
         });
+
+        function toggleDemoMode() {
+            experimentData.demoMode = !experimentData.demoMode;
+            
+            // Clear current timeout to immediately advance
+            if (currentTimeout) {
+                clearTimeout(currentTimeout);
+                currentTimeout = null;
+            }
+            
+            // Update progress display to show demo mode
+            const progressElement = document.getElementById('progress');
+            const currentText = progressElement.textContent;
+            if (experimentData.demoMode) {
+                progressElement.textContent = currentText + ' [DEMO MODE - Press SPACE to toggle]';
+            } else {
+                progressElement.textContent = currentText.replace(' [DEMO MODE - Press SPACE to toggle]', '');
+            }
+            
+            // If in demo mode, advance immediately
+            if (experimentData.demoMode) {
+                runNextTrial();
+            }
+        }
     </script>
 </body>
 </html>

@@ -11,19 +11,26 @@ This directory contains a **working web-based version** of the fMRI Tool Represe
 
 1. **Open `simple_experiment.html`** in any modern web browser
 2. **Enter participant ID** (defaults to "test001")
-3. **Click "Begin Experiment"**
+3. **Click "Begin Experiment"** or press SPACEBAR
 4. **Complete all four conditions**:
-   - Tools (10 images)
-   - Shapes (10 images) 
-   - Scrambled Tools (10 images)
-   - Scrambled Shapes (10 images)
+   - Scrambled Tools (8 images)
+   - Tools (8 images)
+   - Scrambled Shapes (8 images)
+   - Shapes (8 images)
+
+### Demo Mode
+- **Press SPACEBAR** during the experiment to toggle demo mode on/off
+- **Demo mode** runs trials much faster (1s stimulus, 0.5s intervals)
+- **Perfect for demonstrations** and testing the experiment structure
+- **Press SPACEBAR again** to return to normal timing
 
 ## Features
 
 - ✅ **Self-contained**: No external dependencies or CDN libraries
 - ✅ **Cross-browser compatible**: Works in Chrome, Firefox, Safari, Edge
-- ✅ **All 40 stimulus images**: Complete set from fMRI study
-- ✅ **Proper timing**: 2-second stimulus presentation with fixation cross
+- ✅ **32 stimulus images**: 8 images per condition from fMRI study
+- ✅ **Proper timing**: 2-second stimulus presentation with 10-second interstimulus intervals
+- ✅ **Demo mode**: Press SPACEBAR to toggle faster timing for demonstrations
 - ✅ **Randomization**: Images shuffled within each condition
 - ✅ **Data logging**: All responses logged to browser console
 - ✅ **Responsive design**: Adapts to different screen sizes
@@ -31,10 +38,11 @@ This directory contains a **working web-based version** of the fMRI Tool Represe
 ## Experimental Design
 
 - **Stimulus Duration**: 2 seconds per image
-- **Fixation Cross**: 0.5 seconds before each stimulus
+- **Interstimulus Interval**: 10 seconds with fixation cross
 - **Randomization**: Random order within each condition
-- **Conditions**: 4 separate blocks (Tools, Shapes, SCR Tools, SCR Shapes)
-- **Total Duration**: ~2-3 minutes
+- **Block Sequence**: Scrambled Tools → Tools → Scrambled Shapes → Shapes
+- **Images per Block**: 8 images per condition
+- **Total Duration**: ~10 minutes
 
 ## Data Collection
 
