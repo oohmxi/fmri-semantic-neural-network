@@ -176,3 +176,6 @@ data/processed/**
 # (Optional) Ignore large raw data; keep README tracked
 data/raw/**
 !data/raw/README.md
+
+# Documentation source files
+docs_source/presentation.txt
