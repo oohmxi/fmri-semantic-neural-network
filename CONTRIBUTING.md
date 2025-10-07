@@ -2,11 +2,11 @@
 
 Thank you for your interest in contributing to the fMRI Tool Representation Study! This document provides guidelines for contributing to this research project.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project investigates neural representations of graspable objects using a comprehensive data engineering approach, combining Python analysis pipelines with AFNI neuroimaging workflows. The research addresses critical questions in neuroprosthetic rehabilitation and brain-computer interface design.
 
-## 🤝 How to Contribute
+## How to Contribute
 
 ### Types of Contributions
 
@@ -63,7 +63,7 @@ We welcome contributions in the following areas:
    git checkout -b feature/your-feature-name
    ```
 
-## 📋 Development Guidelines
+## Development Guidelines
 
 ### Code Style
 
@@ -117,7 +117,7 @@ tests/
 └── test_integration.py       # End-to-end integration tests
 ```
 
-## 🔬 Research Contributions
+## Research Contributions
 
 ### Experimental Design
 
@@ -137,7 +137,7 @@ For new analysis methods:
 3. **Effect Sizes**: Report practical significance measures
 4. **Reproducibility**: Ensure deterministic results
 
-## 📊 Data Handling
+## Data Handling
 
 ### Data Privacy
 
@@ -153,7 +153,7 @@ For new analysis methods:
 - **Results**: Use standard formats (CSV, JSON, PNG)
 - **Metadata**: Include comprehensive data descriptions
 
-## 🚀 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting
 
@@ -196,7 +196,7 @@ Describe how this contributes to the research goals
 3. **Research Review**: Scientific accuracy and rigor verification
 4. **Integration Testing**: Ensure compatibility with existing code
 
-## 🎓 Academic Contributions
+## Academic Contributions
 
 ### Citation Guidelines
 
@@ -214,7 +214,7 @@ When using this project in research:
 - **Results**: Publication-ready outputs provided
 - **Collaboration**: Open to research collaborations
 
-## 🐛 Bug Reports
+## Bug Reports
 
 ### Reporting Bugs
 
@@ -258,7 +258,7 @@ Error output here
 Any other relevant information
 ```
 
-## 💡 Feature Requests
+## Feature Requests
 
 ### Suggesting Features
 
@@ -267,7 +267,7 @@ Any other relevant information
 3. **Benefits**: Explain research impact
 4. **Alternatives**: Consider existing solutions
 
-## 📞 Contact and Support
+## Contact and Support
 
 ### Getting Help
 
@@ -283,7 +283,7 @@ Any other relevant information
 - **Be patient**: Research projects have complex requirements
 - **Be collaborative**: Work together toward research goals
 
-## 🏆 Recognition
+## Recognition
 
 ### Contributor Recognition
 
@@ -294,7 +294,7 @@ Contributors will be recognized through:
 3. **Documentation**: Contributor list in project docs
 4. **Collaboration**: Invitation to research collaborations
 
-## 📄 License
+## License
 
 By contributing to this project, you agree that your contributions will be licensed under the same MIT License that covers the project.
 

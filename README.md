@@ -12,7 +12,7 @@
 [![Tests](https://img.shields.io/badge/Tests-Passing-green.svg)](https://github.com/ohernandez/fmri-tool-representation/actions)
 [![Coverage](https://img.shields.io/badge/Coverage-80%25-green.svg)](https://github.com/ohernandez/fmri-tool-representation/actions)
 
-## 🎯 Project Motivation
+## Project Motivation
 
 <div align="center">
   <img src="images/background.png" alt="Background: Action Observation Therapy in Prosthesis Rehabilitation" width="500"/>
@@ -25,7 +25,7 @@ Traditional prosthesis rehabilitation relies on action observation therapy—usi
 - **Rehabilitation protocols** for motor recovery  
 - **Motor imagery training** systems for amputees
 
-## 🔬 Research Question & Experimental Design
+## Research Question & Experimental Design
 
 **Core Research Question:** Are tools special? Do they automatically activate motor representations based on functional identity rather than just graspability?
 
@@ -56,7 +56,7 @@ This study replicates and extends **Creem-Regehr & Lee (2004)** using modern dat
   <img src="images/experimental_design.png" alt="Experimental Design: 2x2x2 Block Design with Task, Object Type, and Graspability Factors" width="600"/>
 </div>
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
 ### Python Analysis Pipeline
 The core analysis leverages a modular, reproducible Python architecture:
@@ -125,7 +125,7 @@ Python Integration (brain image processing, statistical analysis)
 Automated Reporting (results tables, visualizations, publications)
 ```
 
-## 📊 Key Results
+## Key Results
 
 ### Research Question 1: Are Tools Special?
 - **Tools vs Shapes (Passive Viewing):** Significant activation in Lateral Occipital Complex (LOC) and primary/secondary visual cortices
@@ -172,7 +172,7 @@ Automated Reporting (results tables, visualizations, publications)
   <img src="images/results.png" alt="Brain Activation Results: Motor Localizer, Imagined Grasp, and Tool vs Shape Contrasts" width="700"/>
 </div>
 
-## 📊 Figure Legends
+## Figure Legends
 
 **Figure 1.** *Motor Localizer (Clench > Rest)*  
 Activation of the bilateral primary motor cortex (BA4) confirms expected motor area engagement.  
@@ -188,7 +188,7 @@ Activation confined to occipital visual areas and somatosensory cortices, reflec
 **Figure 4.** *Average Imagined Grasp > Passive Viewing*  
 General parietofrontal activation pattern across conditions indicating shared cognitive-motor processes.
 
-## 🚀 Technical Achievements
+## Technical Achievements
 
 ### Data Engineering Excellence
 - **Modular Architecture:** Clean separation of concerns with reusable components
@@ -208,7 +208,7 @@ General parietofrontal activation pattern across conditions indicating shared co
 - **4 statistical contrasts** addressing all research questions
 - **Automated quality control** with comprehensive validation
 
-## 🔧 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.7+
@@ -238,7 +238,7 @@ This will automatically:
 - Create publication-ready visualizations
 - Export comprehensive results
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fmri-tool-representation/
@@ -264,7 +264,7 @@ fmri-tool-representation/
 └── run_analysis.py         # Main analysis pipeline
 ```
 
-## 🎯 Impact and Applications
+## Impact and Applications
 
 ### Scientific Contributions
 This research provides empirical evidence that:
@@ -286,19 +286,19 @@ The project demonstrates:
 3. **Professional software engineering** with modular, documented code
 4. **Statistical rigor** with appropriate corrections and effect size reporting
 
-## 📋 Limitations
+## Limitations
 
 - **Single Subject Analysis:** Only one subject's data analyzed (subject 2 alignment issues prevented inclusion)
 - **Small Sample Size:** Limits generalizability of findings
 - **Future Enhancements:** Should incorporate ROI averaging, group-level contrasts, and additional GLTs for graspability and tool-type interactions
 
-## 📚 References
+## References
 
 - Creem-Regehr, S. H., & Lee, J. N. (2004). Neural representations of graspable objects: are tools special? *Cognitive Brain Research*, 22, 457-469.
 - Tucker, M., & Ellis, R. (2001). The potentiation of grasp types during visual object categorization. *Visual Cognition*, 8, 769-800.
 - Buccino, G. (2014). Action observation treatment: a novel tool in neurorehabilitation. *Philosophical Transactions of the Royal Society B*, 369(1644), 20130185.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to the fMRI Tool Representation Study! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute.
 
@@ -311,11 +311,11 @@ We welcome contributions to the fMRI Tool Representation Study! Please see our [
 
 For questions about methodology or collaboration opportunities, please contact the author or open an issue.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📚 Citation
+## Citation
 
 If you use this software in your research, please cite:
 
@@ -331,7 +331,7 @@ If you use this software in your research, please cite:
 
 For detailed citation information, see [CITATION.cff](CITATION.cff).
 
-## 🏷️ Topics
+## Topics
 
 This project is tagged with the following topics for easy discovery:
 
