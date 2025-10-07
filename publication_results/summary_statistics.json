@@ -1,0 +1,61 @@
+{
+  "data_overview": {
+    "total_trials": 660,
+    "participants": 1,
+    "conditions": [
+      "passive_viewing"
+    ],
+    "stimulus_types": [
+      "SCRshape",
+      "SCRtool",
+      "tool",
+      "Shape"
+    ]
+  },
+  "timing_statistics": {
+    "mean": 317.35016969696966,
+    "std": 128.4651950969849,
+    "min": 94.4622,
+    "max": 538.4056,
+    "median": 317.9643,
+    "q25": 203.6788,
+    "q75": 424.1188
+  },
+  "condition_statistics": {
+    "passive_viewing": {
+      "n_trials": 660,
+      "percentage": 100.0,
+      "participants": 1
+    }
+  },
+  "stimulus_statistics": {
+    "SCRshape": {
+      "n_trials": 165,
+      "percentage": 25.0,
+      "participants": 1
+    },
+    "SCRtool": {
+      "n_trials": 165,
+      "percentage": 25.0,
+      "participants": 1
+    },
+    "tool": {
+      "n_trials": 165,
+      "percentage": 25.0,
+      "participants": 1
+    },
+    "Shape": {
+      "n_trials": 165,
+      "percentage": 25.0,
+      "participants": 1
+    }
+  },
+  "participant_statistics": {
+    "mean_trials_per_participant": 660.0,
+    "std_trials_per_participant": NaN,
+    "min_trials": 660,
+    "max_trials": 660,
+    "mean_timing_per_participant": 317.35,
+    "std_timing_per_participant": 128.465
+  }
+}

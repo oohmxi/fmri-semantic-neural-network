@@ -1,0 +1,123 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+authors:
+  - family-names: Hernandez
+    given-names: Omar
+    orcid: https://orcid.org/0000-0000-0000-0000
+    affiliation: Emory University
+    email: ohfreelancing@gmail.com
+title: 'fMRI Tool Representation Study: Neural Representations of Graspable Objects'
+version: 1.0.0
+date-released: 2024-10-06
+url: https://github.com/ohernandez/fmri-tool-representation
+repository-code: https://github.com/ohernandez/fmri-tool-representation
+license: MIT
+keywords:
+  - fMRI
+  - neuroimaging
+  - neuroprosthetics
+  - brain-computer interface
+  - motor imagery
+  - tool representation
+  - graspable objects
+  - action observation therapy
+  - rehabilitation
+  - neural representations
+abstract: |
+  This project investigates neural representations of graspable objects using a comprehensive data engineering approach,
+  combining Python analysis pipelines with AFNI neuroimaging workflows. The research addresses critical questions in
+  neuroprosthetic rehabilitation: How can we leverage our understanding of tool representation to improve motor
+  recovery and brain-computer interface design? The study replicates and extends Creem-Regehr & Lee (2004) using
+  modern data engineering practices, implementing a 2×2×2 factorial block design with 1,325 trials across passive
+  viewing, imagined grasp, and motor localizer conditions. Key findings demonstrate that tools activate motor
+  representations based on functional identity (t = 3.5802, p = 3.7×10⁻⁴), motor imagery engages parietofrontal
+  networks similar to real grasping (t = 3.5391, p = 0.0016), and passive viewing of tools recruits visual and
+  somatosensory processing networks. These findings directly inform brain-computer interface design for prosthetic
+  control and rehabilitation protocols using motor imagery training.
+preferred-citation:
+  type: software
+  title: 'fMRI Tool Representation Study: Neural Representations of Graspable Objects'
+  authors:
+    - family-names: Hernandez
+      given-names: Omar
+      affiliation: Emory University
+      orcid: https://orcid.org/0000-0000-0000-0000
+  version: 1.0.0
+  date-released: 2024-10-06
+  url: https://github.com/ohernandez/fmri-tool-representation
+  license: MIT
+references:
+  - type: article
+    authors:
+      - family-names: Creem-Regehr
+        given-names: Sarah H.
+      - family-names: Lee
+        given-names: Jung N.
+    title: 'Neural representations of graspable objects: are tools special?'
+    journal: Cognitive Brain Research
+    year: 2004
+    volume: '22'
+    issue: '3'
+    pages: 457-469
+    doi: 10.1016/j.cogbrainres.2004.10.001
+  - type: article
+    authors:
+      - family-names: Tucker
+        given-names: Mike
+      - family-names: Ellis
+        given-names: Rob
+    title: The potentiation of grasp types during visual object categorization
+    journal: Visual Cognition
+    year: 2001
+    volume: '8'
+    issue: '6'
+    pages: 769-800
+    doi: 10.1080/13506280143000144
+  - type: article
+    authors:
+      - family-names: Buccino
+        given-names: Giovanni
+    title: 'Action observation treatment: a novel tool in neurorehabilitation'
+    journal: Philosophical Transactions of the Royal Society B
+    year: 2014
+    volume: '369'
+    issue: '1644'
+    pages: '20130185'
+    doi: 10.1098/rstb.2013.0185
+  - type: software
+    authors:
+      - family-names: Peirce
+        given-names: Jonathan
+      - family-names: Gray
+        given-names: Jeremy R.
+      - family-names: Simpson
+        given-names: Solomon
+      - family-names: MacAskill
+        given-names: Michael
+      - family-names: Höchenberger
+        given-names: Richard
+      - family-names: Sogo
+        given-names: Hiroyuki
+      - family-names: Kastman
+        given-names: Erik
+      - family-names: Lindeløv
+        given-names: Jonas Kristoffer
+    title: 'PsychoPy2: Experiments in behavior made easy'
+    journal: Behavior Research Methods
+    year: 2019
+    volume: '51'
+    issue: '1'
+    pages: 195-203
+    doi: 10.3758/s13428-018-01193-y
+  - type: software
+    authors:
+      - family-names: Cox
+        given-names: Robert W.
+    title: 'AFNI: software for analysis and visualization of functional magnetic
+      resonance neuroimages'
+    journal: Computers and Biomedical Research
+    year: 1996
+    volume: '29'
+    issue: '3'
+    pages: 162-173
+    doi: 10.1006/cbmr.1996.0014

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Rep of Tools - Simple Web Version</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 80%;
+        }
+        
+        .stimulus {
+            max-width: 400px;
+            max-height: 400px;
+            margin: 20px auto;
+        }
+        
+        .fixation {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        
+        .instructions {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #participantForm {
+            margin: 20px 0;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Participant Form -->
+        <div id="participantForm">
+            <h1>Neural Representation of Tools Study</h1>
+            <div class="instructions">
+                <p>Please enter your participant information:</p>
+                <input type="text" id="participantId" placeholder="Participant ID" value="test001">
+                <br><br>
+                <button class="button" onclick="startExperiment()">Start Experiment</button>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div id="instructions" class="hidden">
+            <h2>Instructions</h2>
+            <div class="instructions">
+                <p>Welcome to the Neural Representation of Tools Study!</p>
+                <p>You will see images of tools and shapes.</p>
+                <p>Simply look at each image as it appears.</p>
+                <p>The experiment will run automatically.</p>
+                <br>
+                <button class="button" onclick="beginExperiment()">Begin Experiment</button>
+            </div>
+        </div>
+
+        <!-- Experiment -->
+        <div id="experiment" class="hidden">
+            <div id="fixation" class="fixation hidden">+</div>
+            <img id="stimulus" class="stimulus hidden" alt="Stimulus">
+            <div id="progress" class="instructions"></div>
+        </div>
+
+        <!-- Thank You -->
+        <div id="thankYou" class="hidden">
+            <h2>Thank You!</h2>
+            <div class="instructions">
+                <p>The experiment is complete.</p>
+                <p>Thank you for participating!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Experiment data
+        const experimentData = {
+            participantId: '',
+            startTime: null,
+            trials: [],
+            currentTrial: 0,
+            currentCondition: 0,
+            conditions: [
+                {
+                    name: 'Tools',
+                    images: ['flashlight.jpg', 'frypan.jpg', 'hairbrush.jpg', 'hairdryer.png', 'kinfe.jpg', 'nailclipper.png', 'pliers.jpg', 'razor.jpg', 'scissors.jpg', 'screwdriver.jpg']
+                },
+                {
+                    name: 'Shapes', 
+                    images: ['cone.png', 'cube.png', 'cylinder.png', 'dodecahedron.jpg', 'icosahedron.png', 'pent.png', 'pyramid.png', 'sphere.jpg', 'star.jpg', 'torus.png']
+                },
+                {
+                    name: 'Scrambled Tools',
+                    images: ['SCRbrush.jpg', 'SCRclipper.png', 'SCRdryer.png', 'SCRflash.jpg', 'SCRknife.jpg', 'SCRpan.jpg', 'SCRpliers.jpg', 'SCRrazor.jpg', 'SCRscissors.jpg', 'SCRscrewdriver.jpg']
+                },
+                {
+                    name: 'Scrambled Shapes',
+                    images: ['SCRcone.png', 'SCRcube.png', 'SCRcylinder.png', 'SCRdodeca.jpg', 'SCRicosa.png', 'SCRpent.png', 'SCRpyramid.png', 'SCRsphere.jpg', 'SCRstar.jpg', 'SCRtorus.png']
+                }
+            ]
+        };
+
+        function startExperiment() {
+            const participantId = document.getElementById('participantId').value;
+            if (!participantId.trim()) {
+                alert('Please enter a participant ID');
+                return;
+            }
+            
+            experimentData.participantId = participantId;
+            document.getElementById('participantForm').classList.add('hidden');
+            document.getElementById('instructions').classList.remove('hidden');
+        }
+
+        function beginExperiment() {
+            experimentData.startTime = new Date();
+            document.getElementById('instructions').classList.add('hidden');
+            document.getElementById('experiment').classList.remove('hidden');
+            
+            // Shuffle images within each condition
+            experimentData.conditions.forEach(condition => {
+                condition.images = shuffleArray([...condition.images]);
+            });
+            
+            runNextTrial();
+        }
+
+        function runNextTrial() {
+            if (experimentData.currentCondition >= experimentData.conditions.length) {
+                endExperiment();
+                return;
+            }
+
+            const currentCondition = experimentData.conditions[experimentData.currentCondition];
+            
+            if (experimentData.currentTrial >= currentCondition.images.length) {
+                // Move to next condition
+                experimentData.currentCondition++;
+                experimentData.currentTrial = 0;
+                runNextTrial();
+                return;
+            }
+
+            const currentImage = currentCondition.images[experimentData.currentTrial];
+            
+            // Update progress
+            document.getElementById('progress').textContent = 
+                `${currentCondition.name} (${experimentData.currentTrial + 1}/${currentCondition.images.length})`;
+
+            // Show fixation cross
+            document.getElementById('fixation').classList.remove('hidden');
+            document.getElementById('stimulus').classList.add('hidden');
+
+            setTimeout(() => {
+                // Hide fixation, show stimulus
+                document.getElementById('fixation').classList.add('hidden');
+                const stimulusImg = document.getElementById('stimulus');
+                stimulusImg.src = `./resources/${currentImage}`;
+                stimulusImg.classList.remove('hidden');
+
+                // Log trial data
+                experimentData.trials.push({
+                    condition: currentCondition.name,
+                    image: currentImage,
+                    trialNumber: experimentData.currentTrial + 1,
+                    timestamp: new Date()
+                });
+
+                setTimeout(() => {
+                    // Hide stimulus and move to next trial
+                    stimulusImg.classList.add('hidden');
+                    experimentData.currentTrial++;
+                    
+                    setTimeout(() => {
+                        runNextTrial();
+                    }, 500); // Brief pause between trials
+                }, 2000); // Show stimulus for 2 seconds
+            }, 500); // Show fixation for 0.5 seconds
+        }
+
+        function endExperiment() {
+            document.getElementById('experiment').classList.add('hidden');
+            document.getElementById('thankYou').classList.remove('hidden');
+            
+            // Log final data
+            console.log('Experiment Data:', experimentData);
+            
+            // You could also download the data as JSON
+            const dataStr = JSON.stringify(experimentData, null, 2);
+            console.log('Data to save:', dataStr);
+        }
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Allow spacebar to start experiment from instructions
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space' && !document.getElementById('instructions').classList.contains('hidden')) {
+                event.preventDefault();
+                beginExperiment();
+            }
+        });
+    </script>
+</body>
+</html>
