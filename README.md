@@ -113,7 +113,9 @@ Automated Reporting (results tables, visualizations, publications)
 
 ## Key Results
 
-### Research Question 1: Are Tools Special?
+<details>
+<summary><b>Research Question 1: Are Tools Special?</b></summary>
+
 - **Tools vs Shapes (Passive Viewing):** Significant activation in Lateral Occipital Complex (LOC) and primary/secondary visual cortices
 - **Statistical Threshold:** t = 3.5802, p = 3.7×10⁻⁴, q = 0.0111
 - **Key Regions:**
@@ -121,7 +123,11 @@ Automated Reporting (results tables, visualizations, publications)
   - Pre/Postcentral Gyrus (BA 3–5) at MNI (10, 44, 70)
 - **Interpretation:** Tools recruit visual and somatosensory networks even during passive viewing, indicating early visual areas and somatic mapping networks associated with graspable object perception
 
-### Research Question 2: Action Potentiation  
+</details>
+
+<details>
+<summary><b>Research Question 2: Action Potentiation</b></summary>
+
 - **Imagined Grasp vs Passive Viewing:** Robust parietofrontal activation
 - **Statistical Threshold:** t = 3.5391, p = 0.0016, q = 0.0199
 - **Key Regions:**
@@ -130,13 +136,21 @@ Automated Reporting (results tables, visualizations, publications)
   - Lateral Occipital Complex (BA 19) at MNI (24, 90, 24) - Object recognition and shape processing
 - **Interpretation:** Motor imagery engages the same networks as real grasping, with parietofrontal activation characteristic of the tool-use network
 
-### Research Question 3: Motor Network Validation
+</details>
+
+<details>
+<summary><b>Research Question 3: Motor Network Validation</b></summary>
+
 - **Motor Localizer:** Bilateral M1 activation at MNI (-40, 22, 62)
 - **Statistical Threshold:** t = 3.7037, p = 2.3×10⁻⁴, q = 0.0047
 - **Key Regions:** Primary motor cortex (M1) in Brodmann Area 4, consistent with bilateral motor representation
 - **Interpretation:** Successful localization of motor hand area for functional reference, confirming both hemispheres participate in motor representation during bilateral clenching
 
-### Research Question 4: Cross-Modal Integration
+</details>
+
+<details>
+<summary><b>Research Question 4: Cross-Modal Integration</b></summary>
+
 - **Average Imagined Grasp vs Passive Viewing:** General parietofrontal activation pattern
 - **Statistical Threshold:** t = 3.5391, p = 4.4×10⁻⁴, q = 0.0533
 - **Key Regions:**
@@ -144,6 +158,8 @@ Automated Reporting (results tables, visualizations, publications)
   - Brodmann Area 6 (Premotor Cortex) at MNI (22, 10, 68) - Preparation for imagined movement
   - Left Superior Parietal Lobule (BA 7) at MNI (22, 48, 68) - Spatial reasoning and motor imagery integration
 - **Interpretation:** Consistent engagement of the parietofrontal network across both shape and tool conditions, reinforcing that imagined grasping drives motor-related activation patterns
+
+</details>
 
 ### Neural Network Analysis
 
