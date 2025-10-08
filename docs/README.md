@@ -102,10 +102,8 @@ fmri-tool-representation/
 - **Compatibility**: Cross-platform (Windows, macOS, Linux)
 
 ### Quality Assurance
-- **Test Coverage**: >80% code coverage with comprehensive test suite
-- **Code Quality**: Black formatting, Flake8 linting, MyPy type checking
+- **Code Quality**: Black formatting, Flake8 linting, MyPy type checking (optional)
 - **Documentation**: Complete API documentation and user guides
-- **CI/CD**: Automated testing and deployment pipeline
 
 ## Research Applications
 

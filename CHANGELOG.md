@@ -8,8 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Comprehensive testing infrastructure with unit tests
-- GitHub Actions workflow for automated testing and code quality
 - API documentation for all analysis modules
 - Troubleshooting guide for common issues
 - Citation metadata (CITATION.cff) for academic use
@@ -17,7 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Improved README with citation badge and repository topics
-- Enhanced code coverage reporting
 - Updated contributing guidelines
 
 ## [1.0.0] - 2024-10-06

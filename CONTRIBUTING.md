@@ -117,10 +117,9 @@ For new analysis methods:
 
 ### Before Submitting
 
-1. **Test your changes**: Ensure all tests pass
-2. **Check code style**: Run `black` and `flake8`
-3. **Update documentation**: Update relevant docs
-4. **Write clear commit messages**: Use conventional commit format
+1. **Check code style**: Run `black` and `flake8` (optional)
+2. **Update documentation**: Update relevant docs
+3. **Write clear commit messages**: Use conventional commit format
 
 ### Pull Request Template
 
@@ -132,13 +131,7 @@ Brief description of changes
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
-- [ ] Test improvement
 - [ ] Research extension
-
-## Testing
-- [ ] Unit tests pass
-- [ ] Integration tests pass
-- [ ] Manual testing completed
 
 ## Documentation
 - [ ] Code documented
@@ -151,10 +144,9 @@ Describe how this contributes to the research goals
 
 ### Review Process
 
-1. **Automated Checks**: CI/CD pipeline runs tests and linting
-2. **Code Review**: Maintainers review code quality and methodology
-3. **Research Review**: Scientific accuracy and rigor verification
-4. **Integration Testing**: Ensure compatibility with existing code
+1. **Code Review**: Maintainers review code quality and methodology
+2. **Research Review**: Scientific accuracy and rigor verification
+3. **Manual Testing**: Ensure compatibility with existing code
 
 ## Academic Contributions
 
