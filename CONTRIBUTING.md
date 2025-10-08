@@ -24,11 +24,6 @@ We welcome contributions in the following areas:
    - API documentation enhancements
    - Troubleshooting guide updates
 
-3. **Testing**
-   - Unit test additions and improvements
-   - Integration test development
-   - Test coverage enhancements
-   - Performance benchmarking
 
 4. **Research Extensions**
    - Additional experimental conditions
@@ -54,8 +49,8 @@ We welcome contributions in the following areas:
    # Install dependencies
    pip install -r requirements.txt
    
-   # Install development dependencies
-   pip install pytest pytest-cov black flake8 mypy
+   # Install development dependencies (optional)
+   # pip install black flake8 mypy
    ```
 
 4. **Create a feature branch**:
@@ -73,12 +68,6 @@ We welcome contributions in the following areas:
 - **Formatting**: Use `black` for code formatting
 - **Linting**: Use `flake8` for code quality checks
 
-### Testing Requirements
-
-- **Unit tests**: Write tests for all new functions
-- **Coverage**: Maintain test coverage above 80%
-- **Integration tests**: Test complete analysis pipelines
-- **Performance tests**: Benchmark critical functions
 
 ### Documentation Standards
 
@@ -87,35 +76,6 @@ We welcome contributions in the following areas:
 - **API docs**: Update technical documentation
 - **Examples**: Provide usage examples for new functionality
 
-## 🧪 Testing
-
-### Running Tests
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=analysis --cov-report=html
-
-# Run specific test file
-pytest tests/test_preprocessing.py
-
-# Run with verbose output
-pytest -v
-```
-
-### Test Structure
-
-```
-tests/
-├── test_preprocessing.py      # Data processing tests
-├── test_statistical_analysis.py  # Statistical analysis tests
-├── test_visualization.py      # Visualization tests
-├── test_brain_image_processor.py  # Brain image processing tests
-├── test_results_summary.py   # Results summary tests
-└── test_integration.py       # End-to-end integration tests
-```
 
 ## Research Contributions
 
