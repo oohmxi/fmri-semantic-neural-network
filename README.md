@@ -192,21 +192,40 @@ Automated Reporting (results tables, visualizations, publications)
   <img src="images/results.png" alt="Brain Activation Results: Motor Localizer, Imagined Grasp, and Tool vs Shape Contrasts" width="700"/>
 </div>
 
-## Figure Legends
+<details>
+<summary><b>Figure Legends</b></summary>
 
-**Figure 1.** *Motor Localizer (Clench > Rest)*  
+<details>
+<summary><b>Figure 1. Motor Localizer (Clench > Rest)</b></summary>
+
 Activation of the bilateral primary motor cortex (BA4) confirms expected motor area engagement.  
 File: `clench_afni.png`
 
-**Figure 2.** *Imagined Grasp (Tool) > Passive Viewing (Tool)*  
+</details>
+
+<details>
+<summary><b>Figure 2. Imagined Grasp (Tool) > Passive Viewing (Tool)</b></summary>
+
 Statistical activation map highlighting significant parietofrontal and occipitotemporal activation associated with motor imagery of tools.  
 File: `IGshape_tool_vs_PVshape_tool_GLT#0_Tstat.png`
 
-**Figure 3.** *Passive Viewing (Tool) > Passive Viewing (Shape)*  
+</details>
+
+<details>
+<summary><b>Figure 3. Passive Viewing (Tool) > Passive Viewing (Shape)</b></summary>
+
 Activation confined to occipital visual areas and somatosensory cortices, reflecting perceptual and affordance-level differences.
 
-**Figure 4.** *Average Imagined Grasp > Passive Viewing*  
+</details>
+
+<details>
+<summary><b>Figure 4. Average Imagined Grasp > Passive Viewing</b></summary>
+
 General parietofrontal activation pattern across conditions indicating shared cognitive-motor processes.
+
+</details>
+
+</details>
 
 ## Technical Achievements
 
