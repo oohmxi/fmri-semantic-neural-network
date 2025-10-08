@@ -197,7 +197,7 @@ General parietofrontal activation pattern across conditions indicating shared co
 - **Multiple Comparison Correction:** False discovery rate (FDR) correction
 - **Effect Size Calculations:** Cohen's d and eta-squared for practical significance
 - **Case Study Design:** Single-subject analysis with extensive trial sampling (1,325 trials)
-- **Reproducible Results:** Deterministic analysis with clear statistical procedures
+- **Reproducible Results:** Clear statistical procedures and documentation
 
 ### Code Quality Metrics
 - **1,325 total data points** processed and analyzed
@@ -252,9 +252,7 @@ fmri-tool-representation/
 ├── stimuli/                 # Image stimuli and condition files
 ├── afni_analysis/           # Neuroimaging processing pipeline
 ├── web_experiment/          # Online experiment deployment
-├── tests/                   # Comprehensive test suite
 ├── docs/                    # Technical documentation
-├── .github/workflows/       # GitHub Actions CI/CD pipeline
 ├── CONTRIBUTING.md          # Contribution guidelines
 ├── CHANGELOG.md            # Project changelog
 ├── CITATION.cff            # Academic citation metadata
@@ -279,7 +277,7 @@ Findings directly inform:
 ### Technical Contributions
 The project demonstrates:
 1. **Integrated data pipeline** combining behavioral and neuroimaging analysis
-2. **Reproducible research practices** with automated reporting
+2. **Reproducible research practices** with clear documentation
 3. **Professional software engineering** with modular, documented code
 4. **Statistical rigor** with appropriate corrections and effect size reporting
 
