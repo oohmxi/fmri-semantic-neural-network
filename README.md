@@ -94,17 +94,6 @@ Complementing the Python pipeline, neuroimaging analysis uses **AFNI (Analysis o
 - **GLM analysis** with General Linear Tests (GLTs)
 - **False discovery rate correction** (q < 0.05) for multiple comparisons
 
-**Detailed AFNI Pipeline:**
-```bash
-# Preprocessing Pipeline
-3dvolreg -prefix motion_corrected -base vol001 -1Dfile motion_params.1D
-3dTshift -prefix slice_timing_corrected
-3dmerge -prefix smoothed -1blur_fwhm 6.0
-
-# Statistical Analysis
-3dDeconvolve -input preprocessed_data+orig -polort 2 -num_stimts 4
-3dREMLfit -matrix design_matrix.1D -input preprocessed_data+orig
-```
 
 ### Data Integration Architecture
 The system seamlessly integrates behavioral and neuroimaging data:
