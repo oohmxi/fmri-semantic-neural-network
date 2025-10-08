@@ -9,6 +9,24 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Citation](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 
+## Table of Contents
+
+- [Project Motivation](#project-motivation)
+- [Research Question & Experimental Design](#research-question--experimental-design)
+- [Technical Implementation](#technical-implementation)
+- [Key Results](#key-results)
+- [Figure Legends](#figure-legends)
+- [Technical Achievements](#technical-achievements)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Impact and Applications](#impact-and-applications)
+- [Limitations](#limitations)
+- [References](#references)
+- [Contributing](#contributing)
+- [License](#license)
+- [Citation](#citation)
+- [Contact](#contact)
+
 ## Project Motivation
 
 <div align="center">
@@ -242,27 +260,16 @@ This will automatically:
 
 ## Project Structure
 
-```
-fmri-tool-representation/
-├── analysis/                 # Python analysis modules
-│   ├── preprocessing.py      # Data processing and validation
-│   ├── statistical_analysis.py  # Statistical analysis and hypothesis testing
-│   ├── visualization.py      # Publication-ready plotting and brain maps
-│   ├── results_summary.py   # Automated reporting and export
-│   └── brain_image_processor.py  # AFNI integration and neuroimaging workflow
-├── data/                    # Experimental data and results
-│   ├── raw/                 # Original experimental data
-│   └── processed/           # Cleaned and preprocessed data
-├── experiments/             # PsychoPy experiment scripts
-├── stimuli/                 # Image stimuli and condition files
-├── afni_analysis/           # Neuroimaging processing pipeline
-├── web_experiment/          # Online experiment deployment
-├── docs/                    # Technical documentation
-├── CONTRIBUTING.md          # Contribution guidelines
-├── CHANGELOG.md            # Project changelog
-├── CITATION.cff            # Academic citation metadata
-└── run_analysis.py         # Main analysis pipeline
-```
+The project follows a modular architecture with clear separation of concerns:
+
+- **`analysis/`** - Python analysis modules (preprocessing, statistical analysis, visualization, reporting)
+- **`data/`** - Experimental data and results (raw and processed)
+- **`experiments/`** - PsychoPy experiment scripts
+- **`stimuli/`** - Image stimuli and condition files
+- **`afni_analysis/`** - Neuroimaging processing pipeline
+- **`web_experiment/`** - Online experiment deployment
+- **`docs/`** - Technical documentation
+- **`run_analysis.py`** - Main analysis pipeline
 
 ## Impact and Applications
 
@@ -298,7 +305,8 @@ The project demonstrates:
 - Tucker, M., & Ellis, R. (2001). The potentiation of grasp types during visual object categorization. *Visual Cognition*, 8, 769-800.
 - Buccino, G. (2014). Action observation treatment: a novel tool in neurorehabilitation. *Philosophical Transactions of the Royal Society B*, 369(1644), 20130185.
 
-## Contributing
+<details>
+<summary><b>Contributing</b></summary>
 
 We welcome contributions to the fMRI Tool Representation Study! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute.
 
@@ -310,6 +318,8 @@ We welcome contributions to the fMRI Tool Representation Study! Please see our [
 5. Open a Pull Request
 
 For questions about methodology or collaboration opportunities, please contact the author or open an issue.
+
+</details>
 
 ## License
 
